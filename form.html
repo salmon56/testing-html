@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logins</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="container">
+    <header class="body_header">
+        <h2>Welcome</h2>
+        <br><br>
+    </header>
+    <div class="form-control">
+
+        <form id="loginform" onsubmit="return validateform()">
+        <div>
+        <label for="email">EMAIL</label>
+        <input type="text" id="email" placeholder="Enter your email address" required >
+        <span  id="email_error" class="error"></span><br>
+        </div>
+        <br>
+        <div>
+        <label for="passwork">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required >
+        <span  id="pass_error" class="error"></span><br>
+        </div>
+        </form>
+        <div class="btn">
+        <button class="submit">sign up</button>
+        </div>
+    </div>
+    <p>we are happy for you to,<br><span>join us!</span></p>
+</div>
+    <script src="form.js"></script>
+</body>
+</html>
