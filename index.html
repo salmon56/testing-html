@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="container">
-    <form id="registrationform" onsubmit="return validateForm()">
+    <form id="registrationform" onsubmit="return validateForm(event)">
       <h1>Register</h1>
       <div class="form-control">
         <div>
@@ -32,7 +32,7 @@
         <div>
           <label for="confirmPassword">CONFIRMPASSWORD</label><br>
           <input id="confirmPassword" type="password" placeholder="Confirm password" />
-          <span id="confirmpassword_error" class="error"></span><br>
+          <span id="confirm_error" class="error"></span><br>
         </div>
         <br>
         <div>
@@ -59,7 +59,7 @@
           </select>
         </div>
         <br><br><br><br><br><br><br>
-        <input type="checkbox" name="">Terms & Conditions<br>
+        <input type="checkbox" name="terms">Terms & Conditions<br>
       </div>
       <button class="submit">SUBMIT</button> </form>
   </div>

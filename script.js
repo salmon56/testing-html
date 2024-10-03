@@ -1,4 +1,5 @@
 function validateForm() {
+  e.preventDrfault(); //prevents form submission for validation
   let valid = true;
 
   // Clear error messages
@@ -6,7 +7,7 @@ function validateForm() {
   document.getElementById('email_error').innerHTML = '';
   document.getElementById('password_error').innerHTML = '';
   document.getElementById('age_error').innerHTML = '';
-  document.getElementById('confirmPassword_error').innerHTML = '';
+  document.getElementById('confirm_error').innerHTML = '';
 
   // Validate name
   let name = document.getElementById('name').value;
@@ -35,7 +36,7 @@ function validateForm() {
   // Validate confirm password
   let confirmPassword = document.getElementById('confirmPassword').value;
   if (confirmPassword === "") {
-    document.getElementById('confirmPassword_error').innerHTML = 'Please confirm your password.';
+    document.getElementById('confirm_error').innerHTML = 'Please confirm your password.';
     valid = false;
   } else if (confirmPassword !== password) {
     document.getElementById('confirmPassword_error').innerHTML = "Passwords don't match.";
@@ -51,6 +52,13 @@ function validateForm() {
     document.getElementById('age_error').innerHTML = 'Age must be a number greater than or equal to 18.';
     valid = false;
   }
+    // If valid is true, allow the form to submit
+    if (valid) {
+      // here we want to reset the formonce its submitted
+      document.getElementById('registrationform').reset();
+      // you could redirect or display a success message
+      alert('Form submitted successfully!'); // Example of what to do if valid
+    }
 
   return valid;
 }
